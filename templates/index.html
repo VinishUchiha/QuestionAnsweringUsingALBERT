@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/app.css') }}" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Open+Sans:300|Oxygen|Material+Icons"
+        rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="overlay">
+        <div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div>
+    </div>
+    <h2> Natural Language Search Solution </h2>
+    <div class="row">
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+            <center>
+                <h3>Question Answering using ALBERT</h3>
+            </center>
+
+            <h4> Inputs </h4>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="input_question">Question</label>
+                    <input type="text" class="form-control" id="input_question"></textarea>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label></label>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" id="btn-process">Get
+                        answer</button>
+                </div>
+            </div>
+
+
+            <h4> Answers </h4>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="text_paragraphs">Albert</label>
+                    <textarea class="form-control txt_response" id="text_albert" readonly> </textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="text_paragraphs">Answer paragraphs</label>
+                    <textarea class="form-control txt_input" id="text_paragraphs" readonly> </textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+</body>
+
+</html>
